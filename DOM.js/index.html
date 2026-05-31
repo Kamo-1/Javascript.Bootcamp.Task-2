@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Check</title>
+   
+  
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #837c7c85;
+            margin: 0;
+            padding: 0;
+            
+        }
+      
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #466e9c;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+            text-align: center;
+            padding-bottom: 20px;
+             
+        }
+
+        header h3 {
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #ffffff54;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #227ccf;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1a5bb0;
+        }
+
+        .pass {
+            color: green;
+        }
+
+        .fail {
+            color: red;
+        }
+
+        .error-message {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h3>Student Grade Check</h3>
+            <p>Enter the student's name and mark to get results!</p>
+        </header>
+
+        <div class="card form-card">
+
+            <div class="input-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter student name">
+            </div>
+
+            <div class="input-group">
+                <label for="studentMark">Student Mark</label>
+                <input type="number" id="studentMark" placeholder="Marks" min="0" max="100">
+            </div>
+
+            <button type="button" onclick="checkGrade()">Submit</button>
+
+        </div>
+
+        <div class="card results-card" id="resultArea">
+            <h2>Results</h2>
+            <div id="resultContent"></div>
+        </div>
+
+        <div class="card list-card" id="listSection" style="display:none;">
+            <h2>All Submitted Students</h2>
+
+            <ol id="studentList"></ol>
+
+            <button class="clearBtn" onclick="clearList()"> Clear List</button>
+            
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
