@@ -32,15 +32,15 @@ function checkGrade() {
     let status;
     let grade;
 
-    if (mark >= 80) {
+    if (mark >= 80 && mark <= 100) {
         status = 'Pass';
         grade = 'Distinction';
     }
-    else if (mark >= 65) {
+    else if (mark >= 65 && mark < 80) {
         status = 'Pass';
         grade = 'Merit';
     }
-    else if (mark >= 50) {
+    else if (mark >= 50 && mark < 65) {
         status = 'Pass';
         grade = 'Pass';
     }
