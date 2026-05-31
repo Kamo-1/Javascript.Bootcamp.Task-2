@@ -36,11 +36,11 @@ function checkGrade() {
         status = 'Pass';
         grade = 'Distinction';
     }
-    else if (mark >= 65 && mark < 80) {
+    else if (mark >= 65 && mark < 79) {
         status = 'Pass';
         grade = 'Merit';
     }
-    else if (mark >= 50 && mark < 65) {
+    else if (mark >= 50 && mark < 64) {
         status = 'Pass';
         grade = 'Pass';
     }
